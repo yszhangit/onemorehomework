@@ -1,0 +1,50 @@
+<h1>Documentation</h1>
+
+<h3>What this page about</h3>
+From this page you can explore census data of each county, including population, races, immigrates, income, etc. By orignizing output in table format, you can find out quality of life related metrics on state or country level, also it present the population diversity with race and new immigrate.data.
+
+<ul>column explaination:
+    <li>state: state name</li>
+    <li>county: county name</li>
+    <li>population_2000: county population on year 2000</li>
+    <li>population_2010: county population on year 2010</li>
+    <li>population_change: population change from year 2000 to 2010, in percentage over population of year 2000. positive means people moved in, negative means moved out.</li>
+    <li>home_ownership: percentage of population own home.</li>
+    <li>median_household_income: Median household income.</li>
+    <li>median_house_value: Median value of owner-occupied housing unit</li>
+    <li>income_to_house_value_percentage: median household income over median house value in percentage.</li>
+    <li>white: percent of population that is white</li>
+    <li>black: percent of population that is black</li>
+    <li>asian: percent of population that is asian</li>
+    <li>hispanic: percent of population that is hispanic</li>
+    <li>other_race: percent of population that not above 4 races.</li>
+    <li>foreign_born: percent of population that is foreign born.</li>
+    <li>foreign_language_spoken_at_home: percent of population speak foreign language at home.</li>
+    <li>mean_work_travel_distance: average travel distance to work</li>
+    <li>poverty: percent below povert level</li>
+</ul>
+
+<h3>How to use it</h3>
+This page provides various control options on the left of the page, they will control how data is shown on a dynamic table on the right.
+
+<ul> control the content
+    <li>select state</li>
+    click to display drop down list, limit the content to counties in one state, or leave it for all the counties in US.
+    <li>select what data will be displayed in table</li>
+    select what column will be displayed in the table. this option and "select state" is logical AND, means data need to satisfy both state and toggled to display in order to show in the table.
+    <li>filter small population county</li>
+    There are some counties has very small population, the result often is extreme.
+    <li>distribution of selected data</li>
+    on the bottom of this panel, display the histogram of interested data column.
+</ul>
+
+<h4>table output</h4>
+<div>
+    a data table is used to present data, the columns visibility is controlled by column toggle on the left. each displayed column can be sorted, either increase or decending. the total rows is displayed on the bottom left, on the bottom right is paganation control.
+</div>
+
+<h3>Where is data from</h3>
+The data is from R package "openIntro", which is a supplement to 
+<a href="https://www.openintro.org/stat/extras.php">OpenIntro</a>
+ Statistics book, this package provides wide range of data sets. This web page use part of data set called "countyComplete", it compiled census data of year 2000 and 2010 at US county level.
+
