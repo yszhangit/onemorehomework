@@ -3,6 +3,8 @@ library(DT)
 
 dat <- readRDS('us_counties.rds')
 
+# FIPS not needed in this app, will be used in maps
+dat <- subset(dat, select= -c(FIPS))
 # get list of stats and add "all" at beginning
 states <- c("ALL",as.character(unique(dat$state)))
 

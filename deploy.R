@@ -1,14 +1,13 @@
 library(rsconnect)
-
 library(openintro)
 
 data("countyComplete")
-dat <- countyComplete[,c("state","name","pop2000","pop20100",
+dat <- countyComplete[,c("state","name","pop2000","pop2010",
                          "home_ownership","median_household_income","median_val_owner_occupied",
                          "white","black","asian","hispanic",
                          "foreign_born","foreign_spoken_at_home",
                          "poverty","mean_work_travel"
-)]
+                         )]
 
 # assuming NA response is zero
 dat[is.na(dat)] <- 0
@@ -31,10 +30,10 @@ dat[dat$other_race < 0, "other_race"] <- 0
 dat <- dat[c(1,2,3,4,16,5,6,7,17,8,9,10,11,18,12,13,14,15)]
 # rename columns
 colnames(dat) <- c("state","county","population_2000","population_2010","population_change",
-                   "home_ownership","median_household_income",
-                   "median_house_value","income_to_house_value_percentage",
-                   "white","black","asian","hispanic","other_race",
-                   "foreign_born","foreign_language_spoken_at_home",
+                   "home_ownership_pct","median_household_income",
+                   "median_house_value","income_to_house_value_pct",
+                   "white_pct","black_pct","asian_pct","hispanic_pct","other_race_pct",
+                   "foreign_born_pct","foreign_language_spoken_at_home_pct",
                    "mean_work_travel_distance","poverty"
 )
 
